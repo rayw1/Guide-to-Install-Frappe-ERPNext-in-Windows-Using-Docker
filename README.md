@@ -89,21 +89,21 @@ In Windows 11, how to install Frappe Bench and install Frappe/ERPNext Applicatio
 
     MySQL/MariaDB root password: 123
     cd frappe-bench
-    bench new-site acspy.localhost --no-mariadb-socket 
+    bench new-site acs.localhost --no-mariadb-socket 
     
 ### 9) Set bench developer mode on the new site
     
-    bench --site acspy.localhost set-config developer_mode 1
-    bench --site acspy.localhost clear-cache   
+    bench --site acs.localhost set-config developer_mode 1
+    bench --site acs.localhost clear-cache   
     
     
 ### 10) Install ERPNext
 
     bench get-app --branch version-15 --resolve-deps erpnext
-    bench --site acspy.localhost install-app erpnext
+    bench --site acs.localhost install-app erpnext
     
 ### 11) Start Frappe bench 
-   Ensure you add 127.0.0.1 newsite.localhost entry to c:\windows\system32\drivers\etc\hosts file
+   Ensure you add 127.0.0.1 acs.localhost entry to c:\windows\system32\drivers\etc\hosts file
     
     bench start
     
