@@ -2,7 +2,7 @@
 
 A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install Frappe/ERPNext Application - Aug 2024
 
-### Pre-reqs 
+### 0) Pre-reqs 
 
       Docker Desktop
       - Docker Desktop 4.33.1 (161083)
@@ -16,15 +16,15 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
       VS Code 
       - 1.93.0
     
-### STEP 1 : Check Docker version
+### 1) Check Docker version
     docker version
     git version
 
-### STEP 2 : Clone frappe_docker and move to frappe_docker folder
+### 2) Clone frappe_docker and move to frappe_docker folder
 
     git clone https://github.com/frappe/frappe_docker.git
     
-### STEP 3 : Copy container config folders
+### 3) Copy container config folders
 
    Copy example devcontainer config from 
     
@@ -35,12 +35,12 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
     
     development/vscode-example folder to development/.vscode folder
    
-### STEP 4 : Install VSCode Remote Containers extension
+### 4) Install VSCode Remote Containers extension
     
     Install vscode
     Install 'Dev Containers' extension
     
-###  STEP 5 : After the extensions are installed, you can
+### 5) After the extensions are installed, you can
 
   Open frappe_docker folder in VS Code.
 
@@ -60,14 +60,14 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
    Node v14 and v10 are installed. Check with nvm ls. Node v14 is used by default.
                 
     
-### STEP 6 : Initilase frappe bench with frappe version 14 and Switch directory
+### 6) Initilase frappe bench with frappe version 14 and Switch directory
 
     
     cd frappe_docker
     bench init --skip-redis-config-generation --frappe-branch version-15 frappe-bench
     
     
-### STEP 7 : Setup hosts
+### 7) Setup hosts
     
    We need to tell bench to use the right containers instead of localhost. Run the following commands inside the container:
 
@@ -85,25 +85,25 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
       "redis_socketio": "redis://redis-socketio:6379"
     }
     
-### STEP 8 : Create a new site
+### 8) Create a new site
    sitename MUST end with .localhost for trying deployments locally.
    MySQL/MariaDB root password: 123
     
     cd frappe-bench
     bench new-site acspy.localhost --no-mariadb-socket 
     
-### STEP 9 : Set bench developer mode on the new site
+### 9) Set bench developer mode on the new site
     
     bench --site acspy.localhost set-config developer_mode 1
     bench --site acspy.localhost clear-cache   
     
     
-### STEP 10 : Install ERPNext
+### 10) Install ERPNext
 
     bench get-app --branch version-15 --resolve-deps erpnext
     bench --site d-acspy.localhost install-app erpnext
     
-### STEP 11 : Start Frappe bench 
+### 11) Start Frappe bench 
     
     bench start
     
