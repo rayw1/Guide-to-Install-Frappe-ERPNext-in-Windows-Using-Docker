@@ -1,6 +1,6 @@
 # Guide-to-Install-Frappe-ERPNext-in-Windows-11-Using-Docker
 
-A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install Frappe/ERPNext Application - Aug 2024
+In Windows 11, how to install Frappe Bench and install Frappe/ERPNext Application - Aug 2024
 
 ### 0) Pre-reqs 
 
