@@ -47,7 +47,7 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
   	cd frappe_docker
    	code .
   
-  Launch the command, from Command Palette (Ctrl + Shift + P) Remote-Containers: Reopen in Container. You can also click in the bottom left corner to access the remote container menu.
+  Launch the command, from Command Palette (Ctrl + Shift + P) Dev Containers: Reopen in Container. You can also click in the bottom left corner to access the remote container menu.
   
 ### Note: 
    if this error in running contaners try the below commnad in CMD
@@ -61,7 +61,6 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
                 
     
 ### 6) Initilase frappe bench with frappe version 14 and Switch directory
-
     
     cd frappe_docker
     bench init --skip-redis-config-generation --frappe-branch version-15 frappe-bench
@@ -87,8 +86,8 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
     
 ### 8) Create a new site
    sitename MUST end with .localhost for trying deployments locally.
-   MySQL/MariaDB root password: 123
-    
+
+    MySQL/MariaDB root password: 123
     cd frappe-bench
     bench new-site acspy.localhost --no-mariadb-socket 
     
@@ -101,9 +100,10 @@ A complete Guide to Install Frappe Bench in Windows 11 Using Docker and install 
 ### 10) Install ERPNext
 
     bench get-app --branch version-15 --resolve-deps erpnext
-    bench --site d-acspy.localhost install-app erpnext
+    bench --site acspy.localhost install-app erpnext
     
 ### 11) Start Frappe bench 
+   Ensure you add 127.0.0.1 newsite.localhost entry to c:\windows\system32\drivers\etc\hosts file
     
     bench start
     
