@@ -107,4 +107,4 @@ In Windows 11, how to install Frappe Bench and install Frappe/ERPNext Applicatio
     
     bench start
     
-You can now login with user Administrator and the password you choose when creating the site. Your website will now be accessible at location mysite.localhost:8000
+Your website will now be accessible at location mysite.localhost:8000. Login with user Administrator and the password you used when creating the site
