@@ -60,7 +60,7 @@ In Windows 11, how to install Frappe Bench and install Frappe/ERPNext Applicatio
    Node v14 and v10 are installed. Check with nvm ls. Node v14 is used by default.
                 
     
-### 6) Initilase frappe bench with frappe version 14 and Switch directory
+### 6) Initialise frappe bench with frappe version 15 and Switch directory
     
     cd frappe_docker
     bench init --skip-redis-config-generation --frappe-branch version-15 frappe-bench
